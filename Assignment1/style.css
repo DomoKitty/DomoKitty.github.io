@@ -1,10 +1,11 @@
 body{
-
+  border-style:double
 }
 
 h1{
   font-size:300%;
   text-align:center;
+  position: fixed;
 }
 
 h2{
@@ -13,6 +14,7 @@ h2{
 
 h3{
   font-size:150%;
+  position: relative;
 }
 
 h4{
@@ -22,13 +24,22 @@ h4{
 
 p{
   font-family: "Arial", Times, serif;
-  text-transform: capitalize;
+
 }
 
 h5{
-  font-size:150%
+  text-transform: lowercase;
+  font-size:150%;
 }
 
 h6{
-  font-size:150%
+  font-size:150%;
+  position: absolute; 
+}
+
+ul, ol{
+  color: #008CFF;
+}
+body p{
+  color: #890FFF;
 }
