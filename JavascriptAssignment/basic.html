@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Javascript Assignment</title>
+				<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+				<link href="styles.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="scripts.js"></script>
+</head>
+
+<body>
+<h1>Calculator</h1>
+Enter Numbers One though Five Below
+<br></br>
+
+<form name="UserInput">
+<label for="firstNumber"></label>
+<input type="text" name="text" id="firstNumber" value="Enter Word Number 1"/>
+
+<label for="secondNumber"></label>
+<input type="text" name="text" id="secondNumber" value="Enter Word Number 2"/>
+<br></br>
+
+<label for="buttons">Add</label>
+<input type="button" name="buttons" id="op" value="+" onclick="add()"/>
+
+<label for="buttons">Minus</label>
+<input type="button" name="buttons" id="op" value="-" onclick="minus()"/>
+	<br></br>
+
+<label for="buttons">Divide</label>
+<input type="button" name="buttons" id="op" value="/" onclick="divide()"/>
+
+<label for="buttons">Multiply</label>
+<input type="button" name="buttons" id="op" value="*" onclick="multiply()"/>
+	<br></br>
+
+	<button onclick="reset">Reset</button>
+</form>
+
+<p id="result">The Results Go Here</p>
+
+
+
+</body>
+
+</html>
