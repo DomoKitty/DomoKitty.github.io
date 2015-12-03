@@ -1,5 +1,9 @@
 body{
   border-style:double
+  width: 300px;
+  padding: 25px;
+  border: 25px solid navy;
+  margin: 25px;
 }
 
 h1{
@@ -34,7 +38,7 @@ h5{
 
 h6{
   font-size:150%;
-  position: absolute; 
+  position: absolute;
 }
 
 ul, ol{

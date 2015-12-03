@@ -1,0 +1,27 @@
+body{
+  border-style:double
+}
+
+h1{
+  font-family: "Arial", Times, serif;
+  text-align: center;
+}
+
+p{
+  font-family: "Arial", Times, serif;
+  text-align: center;
+}
+
+label{
+  font-family: "Arial", Times, serif;
+}
+
+form{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
