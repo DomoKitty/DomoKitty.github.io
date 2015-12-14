@@ -1,129 +1,98 @@
-var aNumber = Math.max(10.2,4.5,15.6);
-
-aNumber = Math.round(aNumber);
-
-aNumber = Math.sqrt(aNumber);
-
-document.write(aNumber);
-
-
-
-var aRandomNumber;
-
-aRandomNumber = Math.random();
-
-console.log(aRandomNumber);
-
-aRandomNumber*=10;
-
-console.log(aRandomNumber);
-
-aRandomNumber = Math.floor(aRandomNumber);
-
-console.log(aRandomNumber);
-
-aRandomNumber = (aRandomNumber)+1;
-
-console.log(aRandomNumber);
-
-
-
-var amazon = new Array();
-
-amazon[0] = "Star Wars DVD";
-amazon[1] = "Candle your mom won't use";
-amazon[2] = "Hat";
-amazon[3] = "one";
-amazon[4] = 2;
-
-document.write(amazon[3] + amazon[4]);
-
-amazon.push("Cats");
-amazon.unshift("The Front");
-
-//amazon.pop();
-//amazon.shift();
-
-console.log(amazon);
-
-for(count=0; count < 5; count++){
-
-	 console.log("Hello World - "+count);
-
-}
-
-
-
-if(1 == 1){
-	console.log("Hurrah!");
-}
-
-var left = 10;
-var right = 5;
-
-if(left == right){
-	console.log("1");
-}
-if(left != right){
-	console.log("2");
-}
-else{
-	console.log("Else");
-}
-
-
-
-function aFace(){
-	var aVariable = 10;
-	aVariable+=10;
-	aVariable-=5;
-
-	return (aVariable);
-}
-
-var myVariable = aFace();
-
-console.log(myVariable);
-
+document.write("Here is Today's Date")
 var todayDate = new Date();
-
 var month = todayDate.getMonth();
-
 var year = todayDate.getFullYear();
+var date = todayDate.getDate();
+document.write("<br />" + month + "/" + date + "/" + year);
 
-var day = todayDate.getDate();
 
-document.getElementById("para").innerHTML= month + "/" + day + "/" + year;
-
-var num = 4+3+"five";
-
-document.getElementById("hi").innerHTML= num;
-
-function theName(){
-
-	var aName = document.getElementById("Name").value;
-	console.log(aName);
-
+function Time()
+{
+	var date=new Date();
+	var hours=date.getHours();
+	var minutes=date.getMinutes();
+	var seconds=date.getSeconds();
+	minutes=addZero(minutes);
+	seconds=addZero(seconds);
+	document.getElementById('clock').innerHTML=hours+":"+minutes+":"+seconds;
+	clock=setTimeout(function(){Time()},10);
 }
 
-function changeText(){
-
-  document.getElementById("para").innerHTML="Ocra"
-
+function addZero(digit)
+{
+	if (digit<=9)
+	  {
+		digit="0" + digit;
+	  }
+	return digit;
 }
 
-document.write("<p> I love ocra whales </p>");
+var firstNumber;
+var secondNumber;
+var result;
 
-var NumberOfWhale;
+function add(){
+  firstNumber	= document.getElementById("firstNumber").value;
+	secondNumber	= document.getElementById("secondNumber").value;
 
-NumberOfWhale = 5;
+	firstNumber = getValue(firstNumber);
+	secondNumber = getValue(secondNumber);
 
-NumberOfWhale = NumberOfWhale + 5;
+	result = firstNumber + secondNumber;
 
-NumberOfWhale = NumberOfWhale * 5;
+	document.getElementById("result").innerHTML = result;
+}
 
-NumberOfWhale = NumberOfWhale / 10;
 
-NumberOfWhale = NumberOfWhale - 10;
+function minus(){
+  firstNumber	= document.getElementById("firstNumber").value;
+	secondNumber	= document.getElementById("secondNumber").value;
 
-document.write(NumberOfWhale);
+	firstNumber = getValue(firstNumber);
+	secondNumber = getValue(secondNumber);
+
+	result = firstNumber - secondNumber;
+
+	document.getElementById("result").innerHTML = result;
+}
+
+function divide(){
+  firstNumber	= document.getElementById("firstNumber").value;
+	secondNumber	= document.getElementById("secondNumber").value;
+
+	firstNumber = getValue(firstNumber);
+	secondNumber = getValue(secondNumber);
+
+	result = firstNumber / secondNumber;
+
+	document.getElementById("result").innerHTML = result;
+}
+
+function multiply(){
+  firstNumber	= document.getElementById("firstNumber").value;
+	secondNumber	= document.getElementById("secondNumber").value;
+
+	firstNumber = getValue(firstNumber);
+	secondNumber = getValue(secondNumber);
+
+	result = firstNumber * secondNumber;
+
+	document.getElementById("result").innerHTML = result;
+}
+
+function getValue(resolve){
+
+	if(resolve =="one"){resolve = 1;}
+	else if(resolve == "two"){resolve = 2;}
+	else if(resolve == "three"){resolve = 3;}
+	else if(resolve == "four"){resolve = 4;}
+	else if(resolve == "five"){resolve = 5;}
+  else if(resolve == "six"){resolve = 6;}
+  else if(resolve == "seven"){resolve = 7;}
+  else if(resolve == "eight"){resolve = 8;}
+  else if(resolve == "nine"){resolve = 9;}
+  else if(resolve == "ten"){resolve = 10;}
+	else{resolve = "Not a Number";}
+
+	return resolve;
+}

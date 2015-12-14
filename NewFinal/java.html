@@ -9,14 +9,53 @@
   </head>
   <body>
     <h1>Javascript</h1>
+
+    <body onload="Time()">
+
+  <p>The Current Time </p>
+  <div id="clock"></div>
+  </body>
+
     <h2>Links</h2>
     <a href="basic.html">Main Page</a> <br></br>
     <a href="liloandstitch.html">Lilo and Stitch Fun Facts</a> <br></br>
   	<a href="code.html">Lilo and Stitch Information</a> <br></br>
 
+    <h3>Calculator</h3>
+
+    <img src="blue.png" alt="calculator iron"/>
+
+    Enter Numbers One though Ten Below
+    <br></br>
+
+    <form name="UserInput">
+    <label for="firstNumber"></label>
+    <input type="text" name="text" id="firstNumber" value="Enter Word Number 1"/>
+
+    <label for="secondNumber"></label>
+    <input type="text" name="text" id="secondNumber" value="Enter Word Number 2"/>
+    <br></br>
+
+    <label for="buttons">Add</label>
+    <input type="button" name="buttons" id="op" value="+" onclick="add()"/>
+
+    <label for="buttons">Minus</label>
+    <input type="button" name="buttons" id="op1" value="-" onclick="minus()"/>
+    	<br></br>
+
+    <label for="buttons">Divide</label>
+    <input type="button" name="buttons" id="op2" value="/" onclick="divide()"/>
+
+    <label for="buttons">Multiply</label>
+    <input type="button" name="buttons" id="op3" value="*" onclick="multiply()"/>
+    	<br></br>
+
+    	<button onclick="reset">Reset</button>
+    </form>
+
+    <p id="result">The Results Go Here</p><br></br>
 
   </body>
-
   <footer>
     <p>Posted by: Victoria Ridley</p>
     <p>Contact information: <a href="vr14pa@brocku.ca">
